@@ -1,0 +1,35 @@
+﻿@*@page
+@model ASPNET2._0.Pages.Cliente.DeleteModel
+@{
+    String ident = Request.Query["id"];
+
+    try
+    {
+        string connectionstring = "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=teste;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+
+        using (SqlConnection connection = new SqlConnection(connectionstring))
+        {
+            connection.Open();
+            String sql = "DELETE FROM clients " +
+                         " WHERE id=@ident ";
+
+
+            using (SqlCommand command = new SqlCommand(sql, connection))
+            {
+                
+                command.Parameters.AddWithValue("@ident", ident);
+
+                command.ExecuteNonQuery();
+            }
+        }
+    }
+    catch (Exception ex)
+    {
+
+        
+    }
+    Response.Redirect("/Clients/index");
+}
+
+}
+*@

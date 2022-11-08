@@ -1,0 +1,38 @@
+﻿@page
+@model ASPNET2._0.Pages.IndexModel
+@{
+    ViewData["Title"] = "Clientes";
+}
+<br />
+<h1>Lista de Clientes</h1>
+<button class="btn btn-primary btn-sm" a href="clients/create">Novo Cliente</button>
+<table class="table-bordered">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>NOME</th>
+            <th>FONE</th>
+            <th>EMAIL</th>
+            <th>ENDEREÇO</th>
+            <th>CRIADO EM</th>
+            <th>AÇÃO</th>
+        </tr>
+    </thead>
+    <tbody>
+        @*@foreach (var item in Model.listClients)
+        {
+            <tr>
+                <td>@item.id</td>
+                <td>@item.Name</td>
+                <td>@item.phone</td>
+                <td>@item.email</td>
+                <td>@item.adress</td>
+                <td>@item.create_at</td>
+                <td>
+                    <a class="btn btn-primary btn-sm" a href="clients/edit?id=@item.id">Edit</a>
+                    <a class="btn btn-danger btn-sm" a href="clients/delete?id=@item.id">Del</a>
+                </td>
+            </tr>
+        }*@
+    </tbody>
+</table>

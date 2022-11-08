@@ -1,0 +1,35 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>ASPNET2._0</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Pages\NovaPasta1\**" />
+    <Compile Remove="Pages\NovaPasta\**" />
+    <Content Remove="Pages\NovaPasta1\**" />
+    <Content Remove="Pages\NovaPasta\**" />
+    <EmbeddedResource Remove="Pages\NovaPasta1\**" />
+    <EmbeddedResource Remove="Pages\NovaPasta\**" />
+    <None Remove="Pages\NovaPasta1\**" />
+    <None Remove="Pages\NovaPasta\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Pages\create.cshtml.cs" />
+    <Compile Remove="Pages\Index1.cshtml.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="Pages\create.cshtml" />
+    <Content Remove="Pages\Index1.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Data.SqlClient" Version="5.0.1" />
+  </ItemGroup>
+
+</Project>
